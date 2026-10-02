@@ -1,0 +1,8 @@
+# 跨平台开源仓库：一律用 LF 换行
+# 避免 Windows 用户检出后脚本换行符污染 Unix 环境
+* text=auto eol=lf
+
+# 明确二进制，禁止任何换行转换
+*.png binary
+*.jpg binary
+*.gif binary
