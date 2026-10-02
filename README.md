@@ -11,15 +11,21 @@
 
 ### 安装
 
-把整个文件夹放到你的 skills 目录：
+克隆到你的 skills 目录即可：
 
 ```bash
 # 用户级（所有项目可用）
-~/.workbuddy/skills/subtitle-to-article/
+git clone https://github.com/gusangciren/youtube-to-article-skill.git \
+  ~/.workbuddy/skills/subtitle-to-article
 
 # 或项目级
-你的项目/.workbuddy/skills/subtitle-to-article/
+git clone https://github.com/gusangciren/youtube-to-article-skill.git \
+  你的项目/.workbuddy/skills/subtitle-to-article
 ```
+
+> **文件夹名叫什么不重要。** 技能的显示名由 `SKILL.md` 头部的 `name` 字段
+> 决定（这里是「Youtube 转文章」），所以你 clone 成任意名字都能正常工作。
+> 上面沿用 `subtitle-to-article` 只是为了和文档保持一致。
 
 ### 使用
 
@@ -50,7 +56,7 @@ python scripts/check_article.py 目录/                # 批量
 ## 目录结构
 
 ```
-subtitle-to-article/
+youtube-to-article-skill/                 ← 仓库名；安装后文件夹名可自定义
 ├── SKILL.md                          主文档：原则 / 流程 / 注意事项
 ├── README.md                         本文件
 ├── scripts/
@@ -129,3 +135,20 @@ Obsidian 对中文加粗有个坑（CommonMark 的 flanking 规则按英文空�
 如果你既要「忠于原讲者的整理稿」，又要「带自己观点的风格稿」，
 那是另一个技能 **演讲变文章**（触发词「演讲变文章」）。
 两者产物不同，别搞混——区别见 `SKILL.md` 第 10 节。
+
+---
+
+## License
+
+MIT © gusangciren
+
+随便改、随便用、随便商用，保留版权声明即可。
+
+---
+
+## 关于"Youtube 转文章"这个名字
+
+这个技能处理的是**口语字幕**，源头不一定是 YouTube——播客录音、
+会议转写、B 站视频的字幕都适用。名字沿用最初的叫法没改，
+是怕老用户找不到。判断适不适用，看的是"这是不是口语 spoken-word 转写稿"，
+不看它来自哪个平台。
